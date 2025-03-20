@@ -12,11 +12,10 @@ version = "3.1.11~ynh1"
 maintainers = ["eric_G"]
 
 [upstream]
-license = "free"
+license = "AGPL-3.0"
 website = "https://brie.fi/ng"
-demo = "https://demo.example.com"
+demo = "https://brie.fi/ng"
 admindoc = "https://yunohost.org/packaging_apps"
-userdoc = "https://yunohost.org/apps"
 code = "https://github.com/holtwick/briefing/"
 
 [integration]
@@ -39,33 +38,13 @@ ram.runtime = "50M"
 
     [install.path]
     type = "path"
-    default = "/example"
+    default = "/room"
 
     [install.init_main_permission]
     type = "group"
     default = "visitors"
 
-    [install.language]
-    ask.en = "Choose the application language"
-    ask.fr = "Choisissez la langue de l'application"
-    type = "select"
-    choices = ["fr", "en"]
-    default = "fr"
-
-    [install.admin]
-    # this is a generic question - ask strings are automatically handled by YunoHost's core
-    type = "user"
-
-    [install.password]
-    # this is a generic question - ask strings are automatically handled by YunoHost's core
-    # Note that user-provided passwords questions are not automatically saved as setting
-    help.en = "Use the help field to add an information for the admin about this question."
-    help.fr = "Utilisez le champ aide pour ajouter une information à l'intention de l'administrateur à propos de cette question."
-    type = "password"
-
 [resources]
-    # See the packaging documentation for the full set
-    # of explanation regarding the behavior and properties for each of those
 
     [resources.sources]
 
@@ -78,8 +57,6 @@ ram.runtime = "50M"
     [resources.system_user]
 
     [resources.install_dir]
-
-    [resources.data_dir]
 
     [resources.permissions]
     main.url = "/"
