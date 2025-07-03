@@ -10,7 +10,7 @@ EnvironmentFile="PATH=__INSTALL_DIR__/.env.local"
 Environment="PATH=__PATH_WITH_NODEJS__"
 Environment="NODE_ENV=production"
 WorkingDirectory=__INSTALL_DIR__/
-ExecStart=__NODEJS_DIR__/npm run start
+ExecStart=__NODEJS_DIR__/npm start
 Restart=on-failure
 
 [Install]
